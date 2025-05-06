@@ -163,3 +163,14 @@ def time_(alg, alpha, beta, p):
     return av_time
 
 
+alpha = 5
+beta = 11
+p = 97
+
+time1 = time_(algoritm_SPG, alpha, beta, p)
+time2 = time_(brute_force, alpha, beta, p)
+
+print("час роботи СПГ:", time1)
+print("час роботи перебору:", time2)
+
+
