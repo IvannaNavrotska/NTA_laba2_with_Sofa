@@ -160,6 +160,6 @@ def time_(alg, alpha, beta, p):
         
     av_time = sum(times)/6
 
-    return av_time, times
+    return av_time
 
 
