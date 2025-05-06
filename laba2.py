@@ -1,4 +1,5 @@
 from sympy import factorint
+import time
 
 def algoritm_evklida_with_a_b(b:int, a:int):
     '''
@@ -121,3 +122,25 @@ def algoritm_SPG(alpha, beta, n):
 
 
 print(algoritm_SPG(5, 11, 97))
+
+
+
+
+def brute_force(alpha, beta, p):
+
+    five_minutes = 300
+    start_time = time.time()
+
+    for x in range(0, p-1):
+
+        if time.time() - start_time > five_minutes:
+            return "час вийшов"
+
+        if (alpha**x)%p == beta%p:
+            return x
+        
+    return "дл не знайдено, потрібно більше часу"
+
+
+print(brute_force(5, 11, 97))
+
