@@ -82,7 +82,7 @@ def poshuk(znachennia_p,tabliza, dla_xo, i ):
 def sum_for_x(spisok, p, l):
     x=0
     for i in range(l):
-        print(spisok[i], p**i )
+        #print(spisok[i], p**i )
         x+=spisok[i]*p**i
     x=x%(p**l)
     return [x, p**l]
@@ -105,7 +105,7 @@ def algoritm_SPG(alpha, beta, n):
     x_spisok=[]
     porivniia=[]
     for i in range(len(znachennia_p)):
-        print(i)
+        #print(i)
         x_spisok=[]
         massive_x(x_spisok, znachennia_l[i], znachennia_p[i], beta, alpha, n, i, tabliza)
         x=sum_for_x(x_spisok, znachennia_p[i], znachennia_l[i])
@@ -121,7 +121,7 @@ def algoritm_SPG(alpha, beta, n):
     return x
 
 
-print(algoritm_SPG(5, 11, 97))
+#print(algoritm_SPG(5, 11, 97))
 
 
 
@@ -142,7 +142,7 @@ def brute_force(alpha, beta, p):
     return "дл не знайдено, потрібно більше часу"
 
 
-print(brute_force(5, 11, 97))
+#print(brute_force(5, 11, 97))
 
 
 
@@ -163,9 +163,9 @@ def time_(alg, alpha, beta, p):
     return av_time
 
 
-alpha = 117
-beta = 191
-p = 739
+alpha = int(input("alpha="))
+beta = int(input("beta="))
+p = int(input("p="))
 
 spg = algoritm_SPG(alpha, beta, p)
 bf = brute_force(alpha, beta, p)
