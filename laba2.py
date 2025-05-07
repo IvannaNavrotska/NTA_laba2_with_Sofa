@@ -148,19 +148,12 @@ def brute_force(alpha, beta, p):
 
 def time_(alg, alpha, beta, p):
 
-    times = []
-    
-    for i in range(6):
-        
-        start = time.time()
-        alg(alpha, beta, p)
-        finish = time.time()
+    start = time.time()
+    alg(alpha, beta, p)
+    finish = time.time()
 
-        times.append(finish - start)
-        
-    av_time = sum(times)/6
+    return finish - start
 
-    return av_time
 
 
 alpha = int(input("alpha="))
